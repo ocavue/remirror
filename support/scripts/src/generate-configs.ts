@@ -351,7 +351,7 @@ const DEFAULT_TSCONFIG_META: Required<TsConfigMeta> = {
       declaration: false,
       noEmit: true,
       skipLibCheck: true,
-      // @ts-ignore
+      // @ts-expect-error: wait for new version of `type-fest`
       importsNotUsedAsValues: 'remove',
     },
     include: ['./'],
@@ -369,7 +369,7 @@ const DEFAULT_TSCONFIG_META: Required<TsConfigMeta> = {
       declaration: false,
       noEmit: true,
       skipLibCheck: true,
-      // @ts-ignore
+      // @ts-expect-error: wait for new version of `type-fest`
       importsNotUsedAsValues: 'remove',
     },
     include: ['./'],
@@ -384,7 +384,7 @@ const DEFAULT_TSCONFIG_META: Required<TsConfigMeta> = {
       noUnusedParameters: false,
       allowUnreachableCode: true,
       noImplicitReturns: false,
-      // @ts-ignore
+      // @ts-expect-error: wait for new version of `type-fest`
       importsNotUsedAsValues: 'remove',
     },
     include: ['./'],
@@ -394,7 +394,7 @@ const DEFAULT_TSCONFIG_META: Required<TsConfigMeta> = {
       declaration: false,
       noEmit: true,
       skipLibCheck: true,
-      // @ts-ignore
+      // @ts-expect-error: wait for new version of `type-fest`
       importsNotUsedAsValues: 'remove',
     },
     include: ['./'],
@@ -638,8 +638,6 @@ async function resolveTsConfigMeta(
 
 /**
  * Generate a tsconfig for every package.
- *
- * This is currently unused.
  */
 async function generatePackageTsConfigs() {
   log.info(chalk`\n{blue Generating {bold.grey tsconfig.json} files for all packages}`);
